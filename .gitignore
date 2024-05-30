@@ -1,0 +1,5 @@
+*.png
+
+##### Composer
+composer.phar
+src/formulario-contacto/vendor/*

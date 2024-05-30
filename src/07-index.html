@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // Creación de un objeto de formulario 'FormData'
+    const formData = new FormData();
+
+    // Agregar juego de clave-valor al objeto de Formulario
+    formData.append('name', 'John Doe');
+    formData.append('email', 'john@example.com');
+
+    //Creación de una petición al servidor
+/*     fetch("server.php",{
+      method: 'POST',
+      body: formData
+    }) */
+    fetch("server.php?color=naranja",{
+      method: 'POST',
+      body: formData
+    })
+    .then(res => res.text())
+    .then(data => {
+      console.log(data);
+    });
+
+
+  </script>
+</body>
+</html>
